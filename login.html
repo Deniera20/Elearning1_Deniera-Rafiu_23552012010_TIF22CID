@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Login</title>
+
+    <script>
+        function handleLogin(event) {
+          event.preventDefault(); // Prevents the default form submission
+          // Perform validation or authentication logic here (e.g., checking username/password)
+  
+          // Redirect to the dashboard page after successful login
+          window.location.href = "dashboard.html";
+        }
+      </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form  id="loginForm" onsubmit="handleLogin(event)">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+
+            <div class="register-link">
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
